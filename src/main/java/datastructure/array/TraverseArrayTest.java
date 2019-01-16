@@ -15,7 +15,7 @@ public class TraverseArrayTest {
 //        loopArray(array);
         //有序列表
         int[] orderlyArray = new int[]{6, 7, 8, 9, 10 ,11};
-        int dichotomy = dichotomy(orderlyArray, 10);
+        int dichotomy = dichotomy(orderlyArray, 1);
         System.out.println("dichotomy : " + dichotomy);
     }
 
@@ -31,10 +31,10 @@ public class TraverseArrayTest {
             }else if(value > selectValue){
                 maxIndex = mid - 1;
             }else {
-                break;
+                return mid;
             }
         }
-        return mid;
+        return -1;
     }
 
     static void loopArray(int[] array) {
